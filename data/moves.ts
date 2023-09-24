@@ -1659,8 +1659,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	bonemerang: {
 		num: 155,
-		accuracy: 90,
-		basePower: 50,
+		accuracy: 95,
+		basePower: 60,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Bonemerang",
@@ -1677,7 +1677,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	bonerush: {
 		num: 198,
 		accuracy: 90,
-		basePower: 25,
+		basePower: 30,
 		category: "Physical",
 		name: "Bone Rush",
 		pp: 10,
