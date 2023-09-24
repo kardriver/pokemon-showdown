@@ -3121,7 +3121,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	crabhammer: {
 		num: 152,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 100,
 		category: "Physical",
 		name: "Crabhammer",
