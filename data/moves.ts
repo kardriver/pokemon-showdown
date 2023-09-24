@@ -20574,7 +20574,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	twineedle: {
 		num: 41,
 		accuracy: 100,
-		basePower: 25,
+		basePower: 50,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Twineedle",
@@ -20583,7 +20583,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		multihit: 2,
 		secondary: {
-			chance: 20,
+			chance: 50,
 			status: 'psn',
 		},
 		target: "normal",
