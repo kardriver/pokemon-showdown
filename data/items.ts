@@ -3029,7 +3029,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		spritenum: 475,
 		onModifyCritRatio(critRatio, user) {
 			if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
-				return critRatio + 2;
+				return critRatio + 4;
 			}
 		},
 		itemUser: ["Farfetch\u2019d", "Farfetch\u2019d-Galar", "Sirfetch\u2019d"],
