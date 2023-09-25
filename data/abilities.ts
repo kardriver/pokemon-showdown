@@ -527,11 +527,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 13,
 	},
 	colorchange: {
-		onAfterMoveSecondary(target, source, move) {
+		onBeforeMove(target, source, move) {
 			if (!target.hp) return;
 			const type = move.type;
 			if (
-				target.isActive && move.effectType === 'Move' && move.category !== 'Status' &&
+				target.isActive && move.effectType === 'Move' &&
 				type !== '???' && !target.hasType(type)
 			) {
 				if (!target.setType(type)) return false;
