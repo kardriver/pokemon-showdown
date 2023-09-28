@@ -10819,7 +10819,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 612,
 		name: "Haxorus",
 		types: ["Dragon", "Steel"],
-		baseStats: {hp: 106, atk: 167, def: 90, spa: 50, spd: 90, spe: 97},
+		baseStats: {hp: 106, atk: 167, def: 90, spa: 40, spd: 90, spe: 87},
 		abilities: {0: "Sharpness", 1: "Mold Breaker", H: Technician"},
 		heightm: 1.8,
 		weightkg: 105.5,
