@@ -16722,7 +16722,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "F",
 		types: ["Normal"],
 		gender: "F",
-		baseStats: {hp: 115, atk: 70, def: 90, spa: 59, sm pd: 90, spe: 65},
+		baseStats: {hp: 115, atk: 70, def: 90, spa: 59, spd: 90, spe: 65},
 		abilities: {0: "Aroma Veil", 1: "Gluttony", H: "Thick Fat"},
 		heightm: 1,
 		weightkg: 120,
