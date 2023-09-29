@@ -16733,7 +16733,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	tarountula: {
 		num: 917,
-		name: "Tarountula", d
+		name: "Tarountula", 
 		types: ["Bug"],
 		baseStats: {hp: 35, atk: 41, def: 45, spa: 29, spd: 40, spe: 20},
 		abilities: {0: "Insomnia", H: "Stakeout"},
