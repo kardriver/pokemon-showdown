@@ -5387,6 +5387,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  [POKEMON] is being salt cured!",
 		damage: "  [POKEMON] is hurt by Salt Cure!",
 	},
+		sanctuarybloom: {
+		name: "Sanctuary Bloom",
+		desc: "User recovers 50% of the damage dealt and sets grassy terrain",
+		shortDesc: "Recovers 50% of damage dealt, sets grassy terrain",
+	},
 	sandattack: {
 		name: "Sand Attack",
 		desc: "Lowers the target's accuracy by 1 stage.",
