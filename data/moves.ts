@@ -15989,6 +15989,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
+		onPrepareHit(target, source, move) {        
+        this.attrLastMove('[still]');
+    	  this.add('-anim', source, "Petal Blizzard", target);
+		},
+		onHit(target) {
+			this.field.setTerrain('grassyterrain');
+		},
 		drain: [1, 2],
 		secondary: null,
 		target: "allAdjacentFoes",
