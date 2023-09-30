@@ -23157,6 +23157,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			rocksmash: ["7V", "6M", "5M", "4M", "3M"],
 			round: ["7M", "6M", "5M"],
 			safeguard: ["7M", "7L54", "7V", "6M", "6L54", "5M", "5L54", "4M", "4L54", "3M", "3L51"],
+			sanctuarybloom: ["7M", "7V", "6M", "5M"],
 			secretpower: ["6M", "4M", "3M"],
 			seedbomb: ["7T", "6T", "5T", "4T"],
 			sleeptalk: ["7M", "7V", "6M", "5T", "4M", "3T"],
