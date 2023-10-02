@@ -6634,6 +6634,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, cantusetwice: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel' || type === 'Flying') return 1;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
