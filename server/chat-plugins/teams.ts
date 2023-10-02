@@ -277,13 +277,13 @@ export const TeamsHandler = new class {
 		buf += `<small>Format: ${Dex.formats.get(teamData.format).name}</small><br />`;
 		buf += `<small>Views: ${teamData.views}</small>`;
 		const team = Teams.unpack(teamData.team)!;
-		buf += `<br />`;
-		buf += team.map(set => `<psicon pokemon="${set.species}" />`).join(' ');
 		let link = `view-team-${teamData.teamid}`;
 		if (teamData.private) {
 			link += `-${teamData.private}`;
 		}
-		buf += `<br /><a href="/${link}">${isFull ? 'View full team' : 'Shareable link to team'}</a>`;
+		buf += `<br /><a class="subtle" href="/${link}">`;
+		buf += team.map(set => `<psicon pokemon="${set.species}" />`).join(' ');
+		buf += `</a><br />${isFull ? 'View full team' : 'Shareable link to team'}</a>`;
 		buf += ` <small>(or copy/paste <code>&lt;&lt;${link}&gt;&gt;</code> in chat to share!)</small>`;
 
 		if (user && (teamData.ownerid === user.id || user.can('rangeban'))) {
@@ -481,7 +481,7 @@ export const commands: Chat.ChatCommands = {
 		`/teams setprivacy [team id], [privacy] - Set the privacy of the team matching the [teamid].`,
 		`/teams delete [team id] - Delete the team matching the [teamid].`,
 		`/teams search - Opens the page to search your teams`,
-		`/teams mostviews - Views your teams sorted by most views.`,
+		`/teams mostviews - Views public teams, sorted by most views.`,
 		`/teams view [team ID] - View the team matching the given [team ID]`,
 		`/teams browse - Opens a list of public teams uploaded by other users.`,
 	],
