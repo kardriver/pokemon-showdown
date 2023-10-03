@@ -2343,6 +2343,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Magma Armor",
 		rating: 0.5,
 		num: 40,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+					this.add('-immune', target, '[from] ability: Water Absorb');
+			}
+				return null;
+		}
 	},
 	magnetpull: {
 		onFoeTrapPokemon(pokemon) {
@@ -3013,6 +3019,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Perish Body",
 		rating: 1,
 		num: 253,
+	},
+	phantopomp:  {
+		onDamagingHit(damage, target, source, move) {
+			this.heal(target.baseMaxhp / 8)
+		},
+		name: "Phantopomp",
+		rating: 4,
+		num: 305,
 	},
 	pickpocket: {
 		onAfterMoveSecondary(target, source, move) {
@@ -4039,7 +4053,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.add('-end', pokemon, 'Slow Start', '[silent]');
 		},
 		condition: {
-			duration: 5,
+			duration: 3,
 			onResidualOrder: 28,
 			onResidualSubOrder: 2,
 			onStart(target) {
@@ -5341,7 +5355,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -3,
 	},
 	persistent: {
-		isNonstandard: "CAP",
 		name: "Persistent",
 		// implemented in the corresponding move
 		rating: 3,
