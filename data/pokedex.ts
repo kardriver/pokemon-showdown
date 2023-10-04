@@ -6676,9 +6676,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	luvdisc: {
 		num: 370,
 		name: "Luvdisc",
-		types: ["Water"],
+		types: ["Water", "Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
-		baseStats: {hp: 43, atk: 30, def: 55, spa: 40, spd: 65, spe: 97},
+		baseStats: {hp: 43, atk: 30, def: 55, spa: 95, spd: 95, spe: 97},
 		abilities: {0: "Swift Swim", H: "Hydration"},
 		heightm: 0.6,
 		weightkg: 8.7,

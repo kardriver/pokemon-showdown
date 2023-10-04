@@ -44047,6 +44047,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			liquidation: ["9M", "7T"],
 			luckychant: ["7L13", "6L14", "5L17", "4L17"],
 			mimic: ["3T"],
+			moonblast:["9M", "9L46", "7L46", "6L40"],
 			mudsport: ["7E", "6E", "5E", "5D", "4E", "3E"],
 			naturalgift: ["4M"],
 			protect: ["9M", "7M", "6M", "5M", "4M", "3M"],
