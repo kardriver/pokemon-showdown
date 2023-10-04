@@ -2079,7 +2079,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
 				this.debug('Iron Fist boost');
-				return this.chainModify([4915, 4096]);
+				return this.chainModify(1.5);
 			}
 		},
 		name: "Iron Fist",
@@ -3022,7 +3022,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	phantopomp:  {
 		onDamagingHit(damage, target, source, move) {
-			this.heal(target.baseMaxhp / 8)
+			this.heal(target.baseMaxhp / 6)
 		},
 		name: "Phantopomp",
 		rating: 4,
@@ -3562,7 +3562,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.recoil || move.hasCrashDamage) {
 				this.debug('Reckless boost');
-				return this.chainModify([4915, 4096]);
+				return this.chainModify(1.3);
 			}
 		},
 		name: "Reckless",
@@ -3711,7 +3711,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (this.field.isWeather('sandstorm')) {
 				if (move.type === 'Rock' || move.type === 'Ground' || move.type === 'Steel') {
 					this.debug('Sand Force boost');
-					return this.chainModify([5325, 4096]);
+					return this.chainModify(1.5);
 				}
 			}
 		},

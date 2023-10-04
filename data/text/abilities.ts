@@ -814,8 +814,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	ironfist: {
 		name: "Iron Fist",
-		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.2.",
-		shortDesc: "This Pokemon's punch-based attacks have 1.2x power. Sucker Punch is not boosted.",
+		desc: "This Pokemon's punch-based attacks have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's punch-based attacks have 1.5x power. Sucker Punch is not boosted.",
 	},
 	justified: {
 		name: "Justified",
@@ -1441,8 +1441,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	reckless: {
 		name: "Reckless",
-		desc: "This Pokemon's attacks with recoil or crash damage have their power multiplied by 1.2. Does not affect Struggle.",
-		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.2x power; not Struggle.",
+		desc: "This Pokemon's attacks with recoil or crash damage have their power multiplied by 1.3. Does not affect Struggle.",
+		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
 	},
 	refrigerate: {
 		name: "Refrigerate",
@@ -1504,8 +1504,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sandforce: {
 		name: "Sand Force",
-		desc: "If Sandstorm is active, this Pokemon's Ground-, Rock-, and Steel-type attacks have their power multiplied by 1.3. This Pokemon takes no damage from Sandstorm.",
-		shortDesc: "This Pokemon's Ground/Rock/Steel attacks do 1.3x in Sandstorm; immunity to it.",
+		desc: "If Sandstorm is active, this Pokemon's Ground-, Rock-, and Steel-type attacks have their power multiplied by 1.5. This Pokemon takes no damage from Sandstorm.",
+		shortDesc: "This Pokemon's Ground/Rock/Steel attacks do 1.5x in Sandstorm; immunity to it.",
 	},
 	sandrush: {
 		name: "Sand Rush",

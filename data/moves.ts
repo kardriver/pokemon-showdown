@@ -386,6 +386,44 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Tough",
 	},
+	apocalypse:{
+		num: 906,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Apocalypse",
+		pp: 5,
+		priority: 0,
+		flags: {allyanim: 1, futuremove: 1, slicing: 1},
+		ignoreImmunity: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
+				duration: 2,
+				move: 'apocalypse',
+				source: source,
+				moveData: {
+					id: 'apocalypse',
+					name: "Apocalypse",
+					accuracy: 100,
+					basePower: 100,
+					category: "Physical",
+					priority: 0,
+					flags: {allyanim: 1, futuremove: 1, Slicing: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Dark',
+				},
+			});
+			this.add('-start', source, 'move: Apocalypse');
+			return this.NOT_FAIL;
+		},
+		selfswitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
 	appleacid: {
 		num: 787,
 		accuracy: 100,
@@ -515,7 +553,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	armthrust: {
 		num: 292,
 		accuracy: 100,
-		basePower: 15,
+		basePower: 25,
 		category: "Physical",
 		name: "Arm Thrust",
 		pp: 20,
@@ -2472,21 +2510,21 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {snatch: 1, sound: 1, dance: 1},
 		onTry(source) {
-			if (source.hp <= (source.maxhp * 33 / 100) || source.maxhp === 1) return false;
+			if (source.hp <= (source.maxhp * 50 / 100) || source.maxhp === 1) return false;
 		},
 		onTryHit(pokemon, target, move) {
 			if (!this.boost(move.boosts as SparseBoostsTable)) return null;
 			delete move.boosts;
 		},
 		onHit(pokemon) {
-			this.directDamage(pokemon.maxhp * 33 / 100);
+			this.directDamage(pokemon.maxhp * 50 / 100);
 		},
 		boosts: {
-			atk: 1,
-			def: 1,
-			spa: 1,
-			spd: 1,
-			spe: 1,
+			atk: 2,
+			def: 2,
+			spa: 2,
+			spd: 2,
+			spe: 2,
 		},
 		secondary: null,
 		target: "self",
@@ -3866,7 +3904,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	doomdesire: {
 		num: 353,
 		accuracy: 100,
-		basePower: 140,
+		basePower: 200,
 		category: "Special",
 		name: "Doom Desire",
 		pp: 5,
@@ -5328,7 +5366,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Fire Blast",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1},
 		secondary: {
 			chance: 10,
 			status: 'brn',
@@ -12717,7 +12755,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	mysticalpower: {
 		num: 832,
-		accuracy: 90,
+		accuracy: 100,
 		basePower: 70,
 		category: "Special",
 		name: "Mystical Power",
@@ -17597,7 +17635,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		critRatio: 2,
+		critRatio: 4,
 		tracksTarget: true,
 		secondary: null,
 		target: "normal",

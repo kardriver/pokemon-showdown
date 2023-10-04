@@ -43166,6 +43166,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			airslash: ["8M"],
+			apocalypse: ["8M", "7E", "6E", "5E"],
 			assurance: ["8M", "7E", "6E", "5E", "4E"],
 			attract: ["8M", "7M", "6M", "5M", "4M", "3M"],
 			batonpass: ["8M", "7E", "6E", "5E", "4E", "3E"],
@@ -43229,6 +43230,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			perishsong: ["8L55", "7L1", "7E", "6L1", "6E", "5L65", "5E", "4L65", "3L46", "3S3"],
 			playrough: ["8M", "7E", "6E"],
 			protect: ["8M", "7M", "6M", "5M", "4M", "3M"],
+			psychic: ["8M", "7M", "6M", "5M", "4M", "3M"],
 			psychocut: ["8M", "7L37", "6L37", "5L60", "4L60"],
 			psychup: ["7M", "6M", "5M", "4M", "3T"],
 			punishment: ["7E", "6E", "5E", "4E"],
