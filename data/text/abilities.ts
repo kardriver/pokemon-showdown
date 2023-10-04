@@ -1213,6 +1213,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  Both Pok\u00E9mon will faint in three turns!",
 	},
+	phantopomp:{
+		name: "Phantopomp",
+		desc: "This pokemon heals 1/8th of its health upon a damaging attack",
+		shortDesc: "This pokemon heals 1/8th of its health upon a damaging attack",
+	}
 	pickpocket: {
 		name: "Pickpocket",
 		desc: "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
