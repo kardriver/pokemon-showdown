@@ -9936,7 +9936,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	ivycudgel: {
 		num: 904,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 110,
 		category: "Physical",
 		name: "Ivy Cudgel",
 		pp: 10,
