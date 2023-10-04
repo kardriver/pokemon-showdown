@@ -13913,7 +13913,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	populationbomb: {
 		num: 860,
-		accuracy: 90,
+		accuracy: 95,
 		basePower: 20,
 		category: "Physical",
 		name: "Population Bomb",
