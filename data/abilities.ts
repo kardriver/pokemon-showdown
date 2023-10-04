@@ -2256,7 +2256,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyType(move, pokemon) {
 			if (move.flags['sound'] && !pokemon.volatiles['dynamax']) { // hardcode
 				move.type = 'Water';
+				move.typeChangerBoosted = this.typeChangerBoosted;
 			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
 		},
 		name: "Liquid Voice",
 		rating: 1.5,
@@ -2339,16 +2344,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onImmunity(type, pokemon) {
 			if (type === 'frz') return false;
 		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+					this.add('-immune', target, '[from] ability: Magma Armor');
+					return null
+			}
+		},
 		isBreakable: true,
 		name: "Magma Armor",
 		rating: 0.5,
 		num: 40,
-		onTryHit(target, source, move) {
-			if (target !== source && move.type === 'Water') {
-					this.add('-immune', target, '[from] ability: Water Absorb');
-			}
-				return null;
-		}
 	},
 	magnetpull: {
 		onFoeTrapPokemon(pokemon) {
@@ -4953,11 +4958,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onAnyModifyAccuracyPriority: -1,
 		onAnyModifyAccuracy(accuracy, target, source) {
 			if (source.isAlly(this.effectState.target) && typeof accuracy === 'number') {
-				return this.chainModify([4506, 4096]);
+				return this.chainModify(1.3);
 			}
 		},
+		onModifyAtkPriority: -1,
+		onModifyAtk(atk){
+			return this.chainModify(1.1);
+		},
+		onModifySpAPriority: -1,
+		onModifySpA(atk){
+			return this.chainModify(1.1);
+		},
+		onModifyDefPriority: -1,
+		onModifyDef(def) {
+			return this.chainModify(1.1);
+		},
+		onModifySpDPriority: -1,
+			onModifySpD(spd) {
+				return this.chainModify(1.1);
+		},
+		onModifySpePriority: -1,
+		onModifySpe(spe) {
+			return this.chainModify(1.1);
+		},
 		name: "Victory Star",
-		rating: 2,
+		rating: 4,
 		num: 162,
 	},
 	vitalspirit: {

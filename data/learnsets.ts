@@ -37545,6 +37545,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			embargo: ["7M", "6M", "5M", "4M"],
 			endure: ["8M", "4M", "3T"],
 			facade: ["8M", "7M", "6M", "5M", "4M", "3M"],
+			fairymaw:["8L7", "7L7", "6L7"],
 			fairywind: ["8L4", "7L1", "6L1"],
 			faketears: ["8M", "8L44", "7L5", "6L5", "5L6", "5D", "4L6", "3L6", "3S0"],
 			falseswipe: ["8M", "7M", "6M", "5M", "4E", "3E", "3S1"],
@@ -59701,6 +59702,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	gothitelle: {
 		learnset: {
 			allyswitch: ["8M", "7T"],
+			apocalypse: ["9M", "8M", "7E", "6E", "5E"],
 			attract: ["8M", "7M", "6M", "5M"],
 			bodyslam: ["9M"],
 			brickbreak: ["9M", "8M", "7M", "6M", "5M"],

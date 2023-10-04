@@ -162,8 +162,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	aquaring: {
 		name: "Aqua Ring",
-		desc: "The user has 1/16 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
-		shortDesc: "User recovers 1/16 max HP per turn.",
+		desc: "The user has 1/8 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
+		shortDesc: "User recovers 1/8 max HP per turn.",
 
 		start: "  [POKEMON] surrounded itself with a veil of water!",
 		heal: "  A veil of water restored [POKEMON]'s HP!",
@@ -505,8 +505,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	bittermalice: {
 		name: "Bitter Malice",
-		desc: "Has a 100% chance to lower the target's Attack by 1 stage.",
-		shortDesc: "100% chance to lower the target's Attack by 1.",
+		desc: "Has a 100% chance to lower the target's Attack and Special Attack by 1 stage.",
+		shortDesc: "100% chance to lower the target's Attack and Special Attack by 1.",
 	},
 	blackholeeclipse: {
 		name: "Black Hole Eclipse",
@@ -850,8 +850,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	chargebeam: {
 		name: "Charge Beam",
-		desc: "Has a 70% chance to raise the user's Special Attack by 1 stage.",
-		shortDesc: "70% chance to raise the user's Sp. Atk by 1.",
+		desc: "Has a 100% chance to raise the user's Special Attack by 1 stage.",
+		shortDesc: "100% chance to raise the user's Sp. Atk by 1.",
 	},
 	charm: {
 		name: "Charm",
@@ -931,8 +931,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	clangingscales: {
 		name: "Clanging Scales",
-		desc: "Lowers the user's Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense by 1.",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent Pokemon.",
 	},
 	clangoroussoul: {
 		name: "Clangorous Soul",
@@ -1333,11 +1333,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	diamondstorm: {
 		name: "Diamond Storm",
-		desc: "Has a 50% chance to raise the user's Defense by 2 stages.",
-		shortDesc: "50% chance to raise user's Defense by 2.",
+		desc: "Has a 50% chance to raise the user's Defense stats by 2 stages.",
+		shortDesc: "50% chance to raise user's Defense stats by 2.",
 		gen6: {
-			desc: "Has a 50% chance to raise the user's Defense by 1 stage for each hit.",
-			shortDesc: "50% chance to raise user's Def by 1 for each hit.",
+			desc: "Has a 50% chance to raise the user's Defense stats by 1 stage for each hit.",
+			shortDesc: "50% chance to raise user's Def stats by 1 for each hit.",
 		},
 	},
 	dig: {
@@ -1884,6 +1884,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		},
 
 		activate: "  No one will be able to run away during the next turn!",
+	},
+	fairymaw: {
+		name: "Fairy Maw",
+		desc: "Has a 50% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "50% chance to lower the target's Speed by 1.",
 	},
 	fairywind: {
 		name: "Fairy Wind",
@@ -3988,8 +3993,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	meteorassault: {
 		name: "Meteor Assault",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "If this move is successful, the user cannot select this move on the following turn.",
+		shortDesc: "Cannot be used twice in a row.",
 	},
 	meteorbeam: {
 		name: "Meteor Beam",
@@ -4260,8 +4265,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mountaingale: {
 		name: "Mountain Gale",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Usually goes first and has a 30% chance to make the target flinch.",
+		shortDesc: "Usually goes first and has a 30% chance to make the target flinch.",
 	},
 	mudbomb: {
 		name: "Mud Bomb",
@@ -4858,8 +4863,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	psychoboost: {
 		name: "Psycho Boost",
-		desc: "Lowers the user's Special Attack by 2 stages.",
-		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		desc: "Lowers the user's Special Attack by 1 stage.",
+		shortDesc: "Lowers the user's Sp. Atk by 1.",
 	},
 	psychocut: {
 		name: "Psycho Cut",
@@ -5289,8 +5294,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	rockwrecker: {
 		name: "Rock Wrecker",
-		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
-		shortDesc: "User cannot move next turn.",
+		desc: "If this move is successful, cannot be used twice in a row.",
+		shortDesc: "Cannot be used twice in a row.",
 	},
 	roleplay: {
 		name: "Role Play",
@@ -5647,8 +5652,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	shelter: {
 		name: "Shelter",
-		desc: "Raises the user's Defense by 2 stages.",
-		shortDesc: "Raises the user's Defense by 2.",
+		desc: "Raises the user's Defense stats by 1 stage each and recover 1/4 HP.",
+		shortDesc: "Raises the user's Defense stats by 1 stage each and recovers 1/4 HP.",
 	},
 	shiftgear: {
 		name: "Shift Gear",

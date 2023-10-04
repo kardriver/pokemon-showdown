@@ -947,7 +947,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	magmaarmor: {
 		name: "Magma Armor",
-		shortDesc: "This Pokemon cannot be frozen. Gaining this Ability while frozen cures it.",
+		shortDesc: "This Pokemon is immune to water type moves and cannot be frozen. Gaining this Ability while frozen cures it.",
 	},
 	magnetpull: {
 		name: "Magnet Pull",
@@ -1211,13 +1211,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Making contact with this Pokemon starts the Perish Song effect for it and the attacker. This effect does not happen for this Pokemon if the attacker already has a perish count.",
 		shortDesc: "Making contact with this Pokemon starts the Perish Song effect for it and the attacker.",
 
-		start: "  Both Pok\u00E9mon will faint in three turns!",
+		start: "  Both Pokemon will faint in three turns!",
 	},
 	phantopomp:{
 		name: "Phantopomp",
-		desc: "This pokemon heals 1/8th of its health upon a damaging attack",
-		shortDesc: "This pokemon heals 1/8th of its health upon a damaging attack",
-	}
+		desc: "This pokemon heals 1/6th of its health upon being hit by a damaging attack",
+		shortDesc: "This pokemon heals 1/6th of its health upon being hit by a damaging attack",
+	},
 	pickpocket: {
 		name: "Pickpocket",
 		desc: "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
@@ -2092,7 +2092,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	victorystar: {
 		name: "Victory Star",
-		shortDesc: "This Pokemon and its allies' moves have their accuracy multiplied by 1.1.",
+		shortDesc: "This Pokemon and its allies' moves have their accuracy multiplied by 1.3. This pokemon receives an additional 10% boost to all its stats excluding HP",
 	},
 	vitalspirit: {
 		name: "Vital Spirit",
