@@ -9283,10 +9283,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hyperdrill: {
 		num: 887,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 140,
 		category: "Physical",
 		name: "Hyper Drill",
-		pp: 5,
+		pp: 10,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
 		secondary: null,
