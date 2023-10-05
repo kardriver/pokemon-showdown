@@ -8631,7 +8631,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Heatran",
 		types: ["Fire", "Steel"],
 		baseStats: {hp: 91, atk: 90, def: 106, spa: 130, spd: 106, spe: 77},
-		abilities: {0: "Magma Armor", H: "Flame Body"},
+		abilities: {0: "Magma Armor", 1: "Magma Armor", H: "Flame Body"},
 		heightm: 1.7,
 		weightkg: 430,
 		color: "Brown",

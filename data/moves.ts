@@ -20290,9 +20290,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1},
-		status: 'psn',
+		onHit(target, source, move) {
+			return target.addVolatile('trapped', source, move, 'trapper');
+		},
+		status: 'tox',
 		boosts: {
-			spe: -1,
+			spe: -2,
 		},
 		secondary: null,
 		target: "normal",
