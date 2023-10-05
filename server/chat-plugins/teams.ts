@@ -176,6 +176,11 @@ export const TeamsHandler = new class {
 					return null;
 				}
 			}
+			// i have no idea how people are getting this, but we got enough reports that
+			// i guess it's worth handling
+			if (toID(set.ability) === 'none') {
+				set.ability = 'No Ability';
+			}
 			if (set.ability && !Dex.abilities.get(set.ability).exists) {
 				connection.popup(`Invalid ability ${set.ability} on ${set.species}.`);
 				return null;
@@ -275,7 +280,7 @@ export const TeamsHandler = new class {
 		buf += `<small>Uploaded by: <strong>${teamData.ownerid}</strong></small><br />`;
 		buf += `<small>Uploaded on: ${Chat.toTimestamp(teamData.date, {human: true})}</small><br />`;
 		buf += `<small>Format: ${Dex.formats.get(teamData.format).name}</small><br />`;
-		buf += `<small>Views: ${teamData.views}</small>`;
+		buf += `<small>Views: ${teamData.views === -1 ? 0 : teamData.views}</small>`;
 		const team = Teams.unpack(teamData.team)!;
 		let link = `view-team-${teamData.teamid}`;
 		if (teamData.private) {
@@ -584,7 +589,7 @@ export const pages: Chat.PageTable = {
 				return this.errorReply(`That team is private.`);
 			}
 			this.title = `[Team] ${team.teamid}`;
-			if (user.id !== team.ownerid) {
+			if (user.id !== team.ownerid && team.views >= 0) {
 				void TeamsHandler.updateViews(team.teamid);
 			}
 			return `<div class="ladder pad">` + TeamsHandler.renderTeam(team, user) + "</div>";
