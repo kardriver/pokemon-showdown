@@ -914,8 +914,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	liquidvoice: {
 		name: "Liquid Voice",
-		desc: "This Pokemon's sound-based moves become Water-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-		shortDesc: "This Pokemon's sound-based moves become Water type.",
+		desc: "This Pokemon's sound-based moves are boosted by 1.5 and become Water-type moves. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's sound-based are boosted by 1.5 and become Water type.",
 	},
 	longreach: {
 		name: "Long Reach",

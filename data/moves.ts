@@ -3388,7 +3388,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	darkestlariat: {
 		num: 663,
 		accuracy: 100,
-		basePower: 85,
+		basePower: 90,
 		category: "Physical",
 		name: "Darkest Lariat",
 		pp: 10,
@@ -18177,18 +18177,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 	spiritshackle: {
 		num: 662,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 85,
 		category: "Physical",
 		name: "Spirit Shackle",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 100,
-			onHit(target, source, move) {
-				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
-			},
-		},
+		volatileStatus: 'partiallytrapped',
 		target: "normal",
 		type: "Ghost",
 		contestType: "Tough",

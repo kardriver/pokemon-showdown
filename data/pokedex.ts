@@ -7269,7 +7269,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Kricketune",
 		types: ["Bug", "Normal"],
 		baseStats: {hp: 77, atk: 55, def: 51, spa: 95, spd: 51, spe: 65},
-		abilities: {0: "Swarm", 1: "Punk Rock", H: "Technician"},
+		abilities: {0: "Swarm", 1: "Technician", H: "Punk Rock"},
 		heightm: 1,
 		weightkg: 25.5,
 		color: "Red",
