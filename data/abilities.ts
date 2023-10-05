@@ -1152,6 +1152,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					active.switchFlag = false;
 				}
 			}
+			target.heal(pokemon.baseMaxhp / 2);
 			target.switchFlag = true;
 			this.add('-activate', target, 'ability: Emergency Exit');
 		},
@@ -3026,7 +3027,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 253,
 	},
 	phantopomp:  {
-		onDamagingHit(damage, target, source, move) {
+		onDamagingHit(damage, target, source, effect) {
 			this.heal(target.baseMaxhp / 6)
 		},
 		name: "Phantopomp",
@@ -5100,13 +5101,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 199,
 	},
 	watercompaction: {
-		onDamagingHit(damage, target, source, move) {
-			if (move.type === 'Water') {
-				this.boost({def: 2});
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				if (!this.boost({def: 2})) {
+					this.add('-immune', target, '[from] ability: Water Compaction');
+				}
+				return null;
 			}
 		},
 		name: "Water Compaction",
-		rating: 1.5,
+		rating: 4,
 		num: 195,
 	},
 	waterveil: {

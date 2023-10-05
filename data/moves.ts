@@ -5123,6 +5123,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		onPrepareHit(target, source, move) {        
+			this.attrLastMove('[still]');
+			  this.add('-anim', source, "Crunch", target);
+			},
 		secondary: {
 			chance: 50,
 			boosts: {
