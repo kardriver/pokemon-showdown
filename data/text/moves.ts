@@ -936,8 +936,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	clangoroussoul: {
 		name: "Clangorous Soul",
-		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage in exchange for the user losing 33% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change.",
-		shortDesc: "User loses 33% of its max HP. +1 to all stats.",
+		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 2 stages in exchange for the user losing 50% of its maximum HP, rounded down. Fails if the user would faint or if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change.",
+		shortDesc: "User loses 50% of its max HP. +2 to all stats.",
 	},
 	clangoroussoulblaze: {
 		name: "Clangorous Soulblaze",
@@ -1019,6 +1019,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	continentalcrush: {
 		name: "Continental Crush",
 		shortDesc: "Power is equal to the base move's Z-Power.",
+	},
+	continentalmight: {
+		name: "Continental Might",
+		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage, in exchange user must recharge. Fails if its Attack, Defense, Special Attack, Special Defense, and Speed stat stages would not change.",
+		shortDesc: "+1 to all stats. User must recharge.",
 	},
 	conversion: {
 		name: "Conversion",
@@ -4303,7 +4308,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	multiattack: {
 		name: "Multi-Attack",
-		desc: "This move's type depends on the user's held Memory.",
+		desc: "This move's type depends on the user's held Memory. Physical if user's attack is higher than their special attack",
 		shortDesc: "Type varies based on the held Memory.",
 	},
 	mysticalfire: {
@@ -7016,8 +7021,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	tripledive: {
 		name: "Triple Dive",
-		desc: "Hits three times.",
-		shortDesc: "Hits 3 times.",
+		desc: "Hits three times. 100% chance to decrease foe defense on each hit",
+		shortDesc: "Hits 3 times. 100% chance to decrease foe defense on each hit",
 	},
 	triplekick: {
 		name: "Triple Kick",

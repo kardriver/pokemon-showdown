@@ -396,6 +396,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {allyanim: 1, futuremove: 1, slicing: 1},
 		ignoreImmunity: true,
+		onPrepareHit(target, source, move) {        
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Doom Desire", target);
+		},
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
@@ -2800,6 +2804,36 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rock",
 		contestType: "Cool",
 	},
+	continentalmight:{
+		num: 908,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Continental Might",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1},
+		onPrepareHit(target, source, move) {        
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Clangorous Soul", target);
+		},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		boosts: {
+			atk: 1,
+			spa: 1,
+			def: 1,
+			spd: 1,
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {boost: {atk: 2}},
+		contestType: "Tough",
+
+	},
 	conversion: {
 		num: 160,
 		accuracy: true,
@@ -5125,7 +5159,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
 		onPrepareHit(target, source, move) {        
 			this.attrLastMove('[still]');
-			  this.add('-anim', source, "Crunch", target);
+			this.add('-anim', source, "Crunch", target);
 			},
 		secondary: {
 			chance: 50,
@@ -12730,13 +12764,16 @@ export const Moves: {[moveid: string]: MoveData} = {
 	multiattack: {
 		num: 718,
 		accuracy: 100,
-		basePower: 120,
-		category: "Physical",
+		basePower: 130,
+		category: "Special",
 		isNonstandard: "Past",
 		name: "Multi-Attack",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 		onModifyType(move, pokemon) {
 			if (pokemon.ignoringItem()) return;
 			move.type = this.runEvent('Memory', pokemon, null, move, 'Normal');
@@ -20536,14 +20573,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 	tripledive: {
 		num: 865,
 		accuracy: 95,
-		basePower: 30,
+		basePower: 25,
 		category: "Physical",
 		name: "Triple Dive",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		multihit: 3,
-		secondary: null,
+		secondary:  {
+			chance: 100,
+			boosts: {
+				Def: -1,
+			},
+		},
 		target: "normal",
 		type: "Water",
 	},
