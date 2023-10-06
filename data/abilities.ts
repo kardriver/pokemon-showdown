@@ -4981,23 +4981,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify(1.3);
 			}
 		},
-		onModifyAtkPriority: -1,
+		onModifyAtkPriority: -2,
 		onModifyAtk(atk){
 			return this.chainModify(1.1);
 		},
-		onModifySpAPriority: -1,
+		onModifySpAPriority: -3,
 		onModifySpA(atk){
 			return this.chainModify(1.1);
 		},
-		onModifyDefPriority: -1,
+		onModifyDefPriority: -4,
 		onModifyDef(def) {
 			return this.chainModify(1.1);
 		},
-		onModifySpDPriority: -1,
+		onModifySpDPriority: -5,
 			onModifySpD(spd) {
 				return this.chainModify(1.1);
 		},
-		onModifySpePriority: -1,
+		onModifySpePriority: -6,
 		onModifySpe(spe) {
 			return this.chainModify(1.1);
 		},
