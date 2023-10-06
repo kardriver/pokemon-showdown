@@ -9300,7 +9300,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hyperbeam: {
 		num: 63,
 		accuracy: 90,
-		basePower: 150,
+		basePower: 180,
 		category: "Special",
 		name: "Hyper Beam",
 		pp: 5,
@@ -9320,7 +9320,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		basePower: 140,
 		category: "Physical",
 		name: "Hyper Drill",
-		pp: 10,
+		pp: 5,
 		priority: 0,
 		flags: {contact: 1, mirror: 1},
 		secondary: null,
@@ -16781,7 +16781,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 				}
 			},
 		},
-		secondary: null,
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
 		target: "allAdjacentFoes",
 		type: "Fire",
 		contestType: "Tough",

@@ -4309,7 +4309,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	multiattack: {
 		name: "Multi-Attack",
 		desc: "This move's type depends on the user's held Memory. Physical if user's attack is higher than their special attack",
-		shortDesc: "Type varies based on the held Memory.",
+		shortDesc: "Type varies based on the held Memory. Uses higher attack stat",
 	},
 	mysticalfire: {
 		name: "Mystical Fire",
@@ -5648,8 +5648,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	shelltrap: {
 		name: "Shell Trap",
-		desc: "Fails unless the user is hit by a physical attack from an opponent this turn before it can execute the move. If the user was hit and has not fainted, it attacks immediately after being hit, and the effect ends. If the opponent's physical attack had a secondary effect removed by the Sheer Force Ability, it does not count for the purposes of this effect.",
-		shortDesc: "User must take physical damage before moving.",
+		desc: "Fails unless the user is hit by a physical attack from an opponent this turn before it can execute the move. If the user was hit and has not fainted, it attacks immediately after being hit, burning the opponent. If the opponent's physical attack had a secondary effect removed by the Sheer Force Ability, it does not count for the purposes of this effect.",
+		shortDesc: "User must take physical damage before moving, burns on hit.",
 
 		start: "  [POKEMON] set a shell trap!",
 		prepare: "  [POKEMON] set a shell trap!",
@@ -5657,8 +5657,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	shelter: {
 		name: "Shelter",
-		desc: "Raises the user's Defense stats by 1 stage each and recover 1/4 HP.",
-		shortDesc: "Raises the user's Defense stats by 1 stage each and recovers 1/4 HP.",
+		desc: "Raises the user's Defense stats by 1 stage each and recovers 1/4 HP.",
+		shortDesc: "+1 Def and spD and recovers 1/4 HP.",
 	},
 	shiftgear: {
 		name: "Shift Gear",

@@ -1215,8 +1215,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	phantopomp:{
 		name: "Phantopomp",
-		desc: "This pokemon heals 1/6th of its health upon being hit by a damaging attack",
-		shortDesc: "This pokemon heals 1/6th of its health upon being hit by a damaging attack",
+		desc: "This pokemon heals 1/5th of its health upon being hit by a damaging attack",
+		shortDesc: "This pokemon heals 1/5th of its health upon being hit by a damaging attack",
 	},
 	pickpocket: {
 		name: "Pickpocket",
@@ -2045,7 +2045,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	truant: {
 		name: "Truant",
-		shortDesc: "This Pokemon skips every other turn instead of using a move.",
+		shortDesc: "This Pokemon skips every other turn, skipped turns heal 1/10 hp and cure status",
 		gen3: {
 			desc: "This Pokemon skips every other turn instead of using a move. If this Pokemon replaces a Pokemon that fainted during end-of-turn effects, its first turn will be skipped.",
 		},
@@ -2134,7 +2134,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	watercompaction: {
 		name: "Water Compaction",
-		shortDesc: "This Pokemon draws Water moves to itself to raise Sp. Atk by 1; Water immunity.",
+		shortDesc: "Water immunity, raise def by 2.",
 	},
 	waterveil: {
 		name: "Water Veil",

@@ -2798,8 +2798,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 99,
 	},
 	normalize: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Normalize');
+		},
 		onModifyTypePriority: 1,
-		onModifyType(move, pokemon) {
+		onModifyType(move) {
 			const noModifyType = [
 				'hiddenpower', 'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
 			];
@@ -2807,12 +2811,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				// TODO: Figure out actual interaction
 				!(move.name === 'Tera Blast' && pokemon.terastallized)) {
 				move.type = 'Normal';
-				move.typeChangerBoosted = this.effect;
 			}
-		},
-		onBasePowerPriority: 23,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
 		},
 		name: "Normalize",
 		rating: 0,
@@ -3029,7 +3028,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	phantopomp:  {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, effect) {
-			this.heal(target.baseMaxhp / 5);
+			target.heal(target.baseMaxhp / 5);
 		},
 		name: "Phantopomp",
 		rating: 4,
@@ -4865,13 +4864,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBeforeMove(pokemon) {
 			if (pokemon.removeVolatile('truant')) {
 				this.add('cant', pokemon, 'ability: Truant');
+				pokemon.heal(pokemon.baseMaxhp / 8);
+				pokemon.cureStatus();
 				return false;
 			}
 			pokemon.addVolatile('truant');
 		},
 		condition: {},
 		name: "Truant",
-		rating: -1,
+		rating: 0,
 		num: 54,
 	},
 	turboblaze: {
