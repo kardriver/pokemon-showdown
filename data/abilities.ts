@@ -1152,7 +1152,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					active.switchFlag = false;
 				}
 			}
-			target.heal(pokemon.baseMaxhp / 2);
+			target.heal(target.baseMaxhp / 2);
 			target.switchFlag = true;
 			this.add('-activate', target, 'ability: Emergency Exit');
 		},
@@ -3027,8 +3027,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 253,
 	},
 	phantopomp:  {
+		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, effect) {
-			this.heal(target.baseMaxhp / 6)
+			this.heal(target.baseMaxhp / 5);
 		},
 		name: "Phantopomp",
 		rating: 4,

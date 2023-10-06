@@ -396,10 +396,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {allyanim: 1, futuremove: 1, slicing: 1},
 		ignoreImmunity: true,
-		onPrepareHit(target, source, move) {        
-			this.attrLastMove('[still]');
-			this.add('-anim', source, "Doom Desire", target);
-		},
+		selfswitch: true,
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
@@ -422,7 +419,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-start', source, 'move: Apocalypse');
 			return this.NOT_FAIL;
 		},
-		selfswitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Dark",
@@ -16077,7 +16073,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Sanctuary Bloom",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, heal: 1},
 		onPrepareHit(target, source, move) {        
         this.attrLastMove('[still]');
     	  this.add('-anim', source, "Petal Blizzard", target);
@@ -20578,7 +20574,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary:  {
 			chance: 100,
 			boosts: {
-				Def: -1,
+				def: -1,
 			},
 		},
 		target: "normal",
