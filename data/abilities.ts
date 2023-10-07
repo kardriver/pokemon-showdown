@@ -3028,7 +3028,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	phantopomp:  {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, effect) {
-			target.heal(target.baseMaxhp / 5);
+			this.heal(target.baseMaxhp / 5);
 		},
 		name: "Phantopomp",
 		rating: 4,
