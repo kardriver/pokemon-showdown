@@ -396,11 +396,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {allyanim: 1, futuremove: 1, slicing: 1},
 		ignoreImmunity: true,
-		selfswitch: true,
 		onTry(source, target) {
 			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 2,
+				duration: 3,
 				move: 'apocalypse',
 				source: source,
 				moveData: {
@@ -419,6 +418,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			this.add('-start', source, 'move: Apocalypse');
 			return this.NOT_FAIL;
 		},
+		selfswitch: true,
 		secondary: null,
 		target: "normal",
 		type: "Dark",

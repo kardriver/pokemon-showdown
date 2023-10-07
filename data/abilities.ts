@@ -3027,8 +3027,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	phantopomp:  {
 		onDamagingHitOrder: 1,
-		onDamagingHit(damage, target, source, effect) {
-			this.heal(target.baseMaxhp / 5);
+		onDamagingHit(pokemon) {
+			pokemon.heal(pokemon.baseMaxhp / 5);
 		},
 		name: "Phantopomp",
 		rating: 4,
