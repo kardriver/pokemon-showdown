@@ -7163,6 +7163,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "This move does not check accuracy.",
 		shortDesc: "This move does not check accuracy. Goes last.",
 	},
+	volantflurry: {
+		name: "Volant Flurry",
+		desc: "Damage is calculated using the user's Speed stat as its Attack, including stat stage changes. Other effects that modify the Attack stat are used as normal.",
+		shortDesc: "Uses user's Spe stat as Atk in damage calculation.",
+	},
 	voltswitch: {
 		name: "Volt Switch",
 		desc: "If this move is successful and the user has not fainted, the user switches out even if it is trapped and is replaced immediately by a selected party member. The user does not switch out if there are no unfainted party members, or if the target switched out using an Eject Button or through the effect of the Emergency Exit or Wimp Out Abilities.",

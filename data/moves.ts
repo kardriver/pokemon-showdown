@@ -20971,6 +20971,24 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Fighting",
 		contestType: "Cool",
 	},
+	volantflurry: {
+		num: 909,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Volant Flurry",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		overrideOffensiveStat: 'spe',
+		onPrepareHit(target, source, move) {        
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Acrobatics", target);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Flying",
+	},
 	voltswitch: {
 		num: 521,
 		accuracy: 100,

@@ -36472,6 +36472,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			twinneedle: ["8M", "7M", "6M", "5M", "4M", "3M"],
 			uproar: ["8M", "7T", "6T", "5T", "4T"],
 			uturn: ["8M", "7M", "6M", "5M", "4M"],
+			volantflurry: ["8M", "7M"],
 			xscissor: ["8M", "8L64", "7M", "7L47", "6M", "6L47", "5M", "5L52", "4M", "4L52"],
 		},
 	},
