@@ -7572,7 +7572,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Cherrim",
 		forme: "Sunshine",
 		types: ["Grass"],
-		baseStats: {hp: 70, atk: 130, def: 70, spa: 87, spd: 130, spe: 130},
+		baseStats: {hp: 70, atk: 100, def: 70, spa: 100, spd: 100, spe: 130},
 		abilities: {0: "Flower Gift"},
 		heightm: 0.5,
 		weightkg: 9.3,

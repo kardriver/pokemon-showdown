@@ -527,17 +527,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 13,
 	},
 	colorchange: {
-		onBeforeMove(target, source, move) {
-			if (!target.hp) return;
+		onFoeBeforeMove(attacker, defender, move) {
 			const type = move.type;
 			if (
-				target.isActive && move.effectType === 'Move' &&
-				type !== '???' && !target.hasType(type)
+				defender.isActive && move.effectType === 'Move' &&
+				type !== '???' && !defender.hasType(type)
 			) {
-				if (!target.setType(type)) return false;
-				this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
+				if (!defender.setType(type)) return false;
+				this.add('-start', defender, 'typechange', type, '[from] ability: Color Change');
 
-				if (target.side.active.length === 2 && target.position === 1) {
+				if (defender.side.active.length === 2 && defender.position === 1) {
 					// Curse Glitch
 					const action = this.queue.willMove(target);
 					if (action && action.move.id === 'curse') {
@@ -3027,8 +3026,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	phantopomp:  {
 		onDamagingHitOrder: 1,
-		onDamagingHit(pokemon) {
-			pokemon.heal(pokemon.baseMaxhp / 5);
+		onDamagingHit(damage, target, source, move) {
+			this.heal(target.baseMaxhp / 5);
 		},
 		name: "Phantopomp",
 		rating: 4,

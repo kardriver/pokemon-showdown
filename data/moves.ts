@@ -395,29 +395,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {allyanim: 1, futuremove: 1, slicing: 1},
-		ignoreImmunity: true,
-		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			Object.assign(target.side.slotConditions[target.position]['futuremove'], {
-				duration: 3,
-				move: 'apocalypse',
-				source: source,
-				moveData: {
-					id: 'apocalypse',
-					name: "Apocalypse",
-					accuracy: 100,
-					basePower: 100,
-					category: "Physical",
-					priority: 0,
-					flags: {allyanim: 1, futuremove: 1, Slicing: 1},
-					ignoreImmunity: false,
-					effectType: 'Move',
-					type: 'Dark',
-				},
-			});
-			this.add('-start', source, 'move: Apocalypse');
-			return this.NOT_FAIL;
-		},
 		selfswitch: true,
 		secondary: null,
 		target: "normal",
@@ -3943,7 +3920,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 					id: 'doomdesire',
 					name: "Doom Desire",
 					accuracy: 100,
-					basePower: 140,
+					basePower: 200,
 					category: "Special",
 					priority: 0,
 					flags: {futuremove: 1},
